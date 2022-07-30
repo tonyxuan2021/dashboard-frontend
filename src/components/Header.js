@@ -26,12 +26,15 @@ const styles = {
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mb:8 }}>
       <AppBar
         position="static"
         style={{ background: "transparent", boxShadow: "none" }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Toolbar
+          disableGutters="true"
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
           <Grid display="flex" alignItems="center">
             <Grid display="flex" flexDirection="column" sx={{ mr: 10 }}>
               <Grid display="flex" gap={1.5}>
