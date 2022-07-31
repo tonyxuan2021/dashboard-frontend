@@ -1,9 +1,103 @@
-import React from 'react'
+import { Divider, Grid, Typography } from "@mui/material";
+import React from "react";
+import house_1 from "../../assets/content/house_1.jpg";
+import house_2 from "../../assets/content/house_2.jpg";
+import house_3 from "../../assets/content/house_3.jpg";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
+const styles = {
+  flexRow: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  flexColumn: {
+    display: "flex",
+    flexDirection: "column",
+  },
+};
 
 const Residence = () => {
   return (
-    <div>Residence</div>
-  )
-}
+    <Grid container item sx={styles.flexRow}>
+      {houses.map((house) => {
+        return (
+          <Grid
+            item
+            sx={[
+              styles.flexColumn,
+              { background: "white", borderRadius: "15px" },
+            ]}
+            xs={3.8}
+            key={house.id}
+          >
+            <Grid item sx={{ p: 3, mt: "-60px" }}>
+              <img
+                style={{ width: "100%", borderRadius: "15px" }}
+                src={house.img}
+              ></img>
+            </Grid>
+            <Grid item sx={[styles.flexColumn, { gap: 2, minHeight: "235px" }]}>
+              <Typography textAlign="center" variant="h5">
+                {house.title}
+              </Typography>
+              <Typography
+                sx={{ pl: 3, pr: 3, pb: 3 }}
+                textAlign="center"
+                variant="h6"
+              >
+                {house.content}
+              </Typography>
+            </Grid>
+            <Divider variant="middle" />
+            <Grid item sx={[styles.flexRow, { p: 3 }]}>
+              <Typography>${house.price}/night</Typography>
+              <Grid item sx={styles.flexRow}>
+                <LocationOnIcon />
+                <Typography>{house.location}</Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        );
+      })}
 
-export default Residence
+      {/* <Grid item sx={styles.flexColumn} xs={3.8}>
+        <img src={house_2}></img>
+      </Grid>
+      <Grid item sx={styles.flexColumn} xs={3.8}>
+        <img src={house_3}></img>
+      </Grid> */}
+    </Grid>
+  );
+};
+
+const houses = [
+  {
+    id: 1,
+    img: house_1,
+    title: "Cozy 5 Stars Apartment",
+    content:
+      "The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to 'Naviglio' where you can enjoy the main night life in Barcelona.",
+    price: 899,
+    location: "Barcelona, Spain",
+  },
+  {
+    id: 2,
+    img: house_2,
+    title: "Office Studio",
+    content:
+      "The place is close to Metro Station and bus stop just 2 min by walk and near to 'Naviglio' where you can enjoy the night life in London, UK.",
+    price: 1119,
+    location: "London, UK",
+  },
+  {
+    id: 3,
+    img: house_3,
+    title: "Beautiful Castle",
+    content:
+      "The place is close to Metro Station and bus stop just 2 min by walk and near to 'Naviglio' where you can enjoy the main night life in Milan.",
+    price: 459,
+    location: "Milan, Italy",
+  },
+];
+
+export default Residence;
