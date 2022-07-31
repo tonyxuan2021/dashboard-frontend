@@ -23,9 +23,11 @@ import { theme } from "../theme";
 
 const styles = {
   container: {
-    height: "100vh",
+    height: "52rem",
+    width: "19rem",
     background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
     borderRadius: 4,
+    position: "fixed",
   },
   light: {
     color: theme.palette.primary.light,
