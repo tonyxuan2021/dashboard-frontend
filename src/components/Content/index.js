@@ -12,6 +12,7 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Charts_2 } from "./Charts/Charts_2";
 import { Charts_3 } from "./Charts/Charts_3";
 import Status from "./Status";
+import Residence from "./Residence";
 
 const styles = {
   flex: {
@@ -119,7 +120,7 @@ const Content = () => {
           <Map />
         </Grid>
       </Grid>
-      <Grid item sx={[styles.flex, {mb: 7}]}>
+      <Grid item sx={[styles.flex, { mb: 7 }]}>
         <Grid item sx={[styles.paper]} xs={3.8}>
           <Grid
             item
@@ -257,6 +258,7 @@ const Content = () => {
         </Grid>
       </Grid>
       <Status />
+      <Residence />
     </Grid>
   );
 };
