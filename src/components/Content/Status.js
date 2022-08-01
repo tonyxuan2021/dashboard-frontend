@@ -4,6 +4,7 @@ import ChairIcon from "@mui/icons-material/Chair";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import StoreIcon from "@mui/icons-material/Store";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import { theme } from "../../theme";
 
 const iconStatus = [
   {
@@ -60,7 +61,6 @@ const styles = {
     p: 2,
   },
   icon: {
-    // background: "black",
     width: 64,
     height: 64,
     borderRadius: "15px",
@@ -70,6 +70,16 @@ const styles = {
     mt: "-40px",
     color: "white",
   },
+  boxShadow: {
+    boxShadow:
+      "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
+  },
+  grey: {
+    color: theme.palette.primary.grey,
+  },
+  dark: {
+    color: theme.palette.primary.dark,
+  },
 };
 
 const Status = () => {
@@ -77,19 +87,29 @@ const Status = () => {
     <Grid container item sx={[styles.flexRow, { mb: 10 }]}>
       {iconStatus.map((status) => {
         return (
-          <Grid item xs={2.8} sx={[styles.flexColumn, styles.border]}>
+          <Grid
+            item
+            xs={2.8}
+            sx={[styles.flexColumn, styles.border, styles.boxShadow]}
+          >
             <Grid item sx={styles.flexRow}>
               <Icon item sx={[styles.icon, { background: status.bkColor }]}>
                 {status.icon}
               </Icon>
               <Grid item sx={[styles.flexColumn, { alignItems: "flex-end" }]}>
-                <Typography variant="h6">{status.title}</Typography>
-                <Typography variant="h5" fontWeight={700}>
-                  {status.number}
+                <Typography
+                  variant="h6"
+                  color={styles.grey}
+                  sx={{ opacity: 0.6 }}
+                >
+                  {status.title}
+                </Typography>
+                <Typography variant="h4" fontWeight={700} color={styles.dark}>
+                  {status.number.toLocaleString()}
                 </Typography>
               </Grid>
             </Grid>
-            <Divider variant="middle" sx={{ mt: 3, mb: 3 }} />
+            <Divider variant="middle" sx={{ mt: 3, mb: 3, opacity: 0.75 }} />
             <Grid item display="flex" gap={1} alignItems="center">
               <Typography
                 color="rgb(76, 175, 80)"
@@ -98,7 +118,9 @@ const Status = () => {
               >
                 {status.percent}
               </Typography>
-              <Typography>{status.period}</Typography>
+              <Typography color={styles.grey} sx={{ opacity: 0.6 }}>
+                {status.period}
+              </Typography>
             </Grid>
           </Grid>
         );

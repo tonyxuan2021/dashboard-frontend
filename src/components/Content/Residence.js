@@ -4,6 +4,7 @@ import house_1 from "../../assets/content/house_1.jpg";
 import house_2 from "../../assets/content/house_2.jpg";
 import house_3 from "../../assets/content/house_3.jpg";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { theme } from "../../theme";
 
 const styles = {
   flexRow: {
@@ -13,6 +14,16 @@ const styles = {
   flexColumn: {
     display: "flex",
     flexDirection: "column",
+  },
+  boxShadow: {
+    boxShadow:
+      "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
+  },
+  grey: {
+    color: theme.palette.primary.grey,
+  },
+  dark: {
+    color: theme.palette.primary.dark,
   },
 };
 
@@ -25,35 +36,43 @@ const Residence = () => {
             item
             sx={[
               styles.flexColumn,
+              styles.boxShadow,
               { background: "white", borderRadius: "15px" },
             ]}
             xs={3.8}
             key={house.id}
           >
-            <Grid item sx={{ p: 3, mt: "-60px" }}>
+            <Grid item sx={[{ p: 3, mt: "-60px" }]}>
               <img
-                style={{ width: "100%", borderRadius: "15px" }}
+                style={{
+                  width: "100%",
+                  borderRadius: "15px",
+                  boxShadow: "5px 5px 30px",
+                }}
                 src={house.img}
               ></img>
             </Grid>
             <Grid item sx={[styles.flexColumn, { gap: 2, minHeight: "235px" }]}>
-              <Typography textAlign="center" variant="h5">
+              <Typography textAlign="center" variant="h5" color={styles.dark}>
                 {house.title}
               </Typography>
               <Typography
-                sx={{ pl: 3, pr: 3, pb: 3 }}
+                sx={{ pl: 3, pr: 3, pb: 3, opacity: 0.6 }}
                 textAlign="center"
                 variant="h6"
+                color={styles.grey}
               >
                 {house.content}
               </Typography>
             </Grid>
-            <Divider variant="middle" />
+            <Divider variant="middle" sx={{ opacity: 0.75 }} />
             <Grid item sx={[styles.flexRow, { p: 3 }]}>
-              <Typography>${house.price}/night</Typography>
-              <Grid item sx={styles.flexRow}>
-                <LocationOnIcon />
-                <Typography>{house.location}</Typography>
+              <Typography color={styles.grey}>
+                ${house.price.toLocaleString()}/night
+              </Typography>
+              <Grid item sx={[styles.flexRow, { gap: 1 }]}>
+                <LocationOnIcon sx={styles.grey} />
+                <Typography color={styles.grey}>{house.location}</Typography>
               </Grid>
             </Grid>
           </Grid>

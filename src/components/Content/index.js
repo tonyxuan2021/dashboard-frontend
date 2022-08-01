@@ -173,7 +173,7 @@ const Content = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: 2.5,
+              gap: 2.0,
               pl: 3,
               pr: 3,
             }}
@@ -185,15 +185,25 @@ const Content = () => {
             >
               Website Views
             </Typography>
-            <Typography color={theme.palette.primary.grey}>
+            <Typography
+              color={theme.palette.primary.grey}
+              sx={{ opacity: 0.6 }}
+            >
               Last Campaign Performance
             </Typography>
-            <Divider variant="middle" />
+            <Divider variant="middle" sx={{ opacity: 0.75 }} />
             <Grid item sx={{ display: "flex", gap: 1 }}>
               <AccessTimeIcon
-                sx={{ color: theme.palette.primary.grey, fontSize: "middle" }}
+                sx={{
+                  color: theme.palette.primary.grey,
+                  fontSize: "middle",
+                  opacity: 0.6,
+                }}
               />
-              <Typography color={theme.palette.primary.grey}>
+              <Typography
+                color={theme.palette.primary.grey}
+                sx={{ opacity: 0.6 }}
+              >
                 campaign sent 2 days ago
               </Typography>
             </Grid>
@@ -218,7 +228,7 @@ const Content = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: 2.5,
+              gap: 2.0,
               pl: 3,
               pr: 3,
             }}
@@ -230,15 +240,25 @@ const Content = () => {
             >
               Website Views
             </Typography>
-            <Typography color={theme.palette.primary.grey}>
+            <Typography
+              color={theme.palette.primary.grey}
+              sx={{ opacity: 0.6 }}
+            >
               Last Campaign Performance
             </Typography>
-            <Divider variant="middle" />
+            <Divider variant="middle" sx={{ opacity: 0.75 }} />
             <Grid item sx={{ display: "flex", gap: 1 }}>
               <AccessTimeIcon
-                sx={{ color: theme.palette.primary.grey, fontSize: "middle" }}
+                sx={{
+                  color: theme.palette.primary.grey,
+                  fontSize: "middle",
+                  opacity: 0.6,
+                }}
               />
-              <Typography color={theme.palette.primary.grey}>
+              <Typography
+                color={theme.palette.primary.grey}
+                sx={{ opacity: 0.6 }}
+              >
                 campaign sent 2 days ago
               </Typography>
             </Grid>
@@ -263,7 +283,7 @@ const Content = () => {
             sx={{
               display: "flex",
               flexDirection: "column",
-              gap: 2.5,
+              gap: 2.0,
               pl: 3,
               pr: 3,
             }}
@@ -275,15 +295,25 @@ const Content = () => {
             >
               Website Views
             </Typography>
-            <Typography color={theme.palette.primary.grey}>
+            <Typography
+              color={theme.palette.primary.grey}
+              sx={{ opacity: 0.6 }}
+            >
               Last Campaign Performance
             </Typography>
-            <Divider variant="middle" />
+            <Divider variant="middle" sx={{ opacity: 0.75 }} />
             <Grid item sx={{ display: "flex", gap: 1 }}>
               <AccessTimeIcon
-                sx={{ color: theme.palette.primary.grey, fontSize: "middle" }}
+                sx={{
+                  color: theme.palette.primary.grey,
+                  fontSize: "middle",
+                  opacity: 0.6,
+                }}
               />
-              <Typography color={theme.palette.primary.grey}>
+              <Typography
+                color={theme.palette.primary.grey}
+                sx={{ opacity: 0.6 }}
+              >
                 campaign sent 2 days ago
               </Typography>
             </Grid>

@@ -53,6 +53,7 @@ const LeftBar = () => {
         variant="middle"
         sx={{
           background: "white",
+          opacity: 0.75,
         }}
       />
       <List>
@@ -73,6 +74,7 @@ const LeftBar = () => {
         variant="middle"
         sx={{
           background: "white",
+          opacity: 0.75,
         }}
       />
       <List>
