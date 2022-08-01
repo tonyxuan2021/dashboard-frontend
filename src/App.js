@@ -21,12 +21,11 @@ const styles = {
 
 function App() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("xl"));
+  const matches = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <Grid container sx={styles.root}>
       <Grid item xs={2.3}>
-        {/* <LeftBar /> */}
         {matches ? null : <LeftBar />}
       </Grid>
       <Grid item xs={matches ? 12 : 9.3}>
