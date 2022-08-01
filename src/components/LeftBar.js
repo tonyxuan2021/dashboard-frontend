@@ -22,7 +22,8 @@ import avatarImg from "../assets/content/avatar.jpeg";
 
 const styles = {
   container: {
-    height: "52rem",
+    // height: "52rem",
+    height: "96vh",
     width: "19rem",
     background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
     borderRadius: 4,

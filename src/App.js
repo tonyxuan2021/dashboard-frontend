@@ -13,7 +13,7 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     gap: 5,
-    p: 3,
+    p: 2,
     maxWidth: "1500px",
     m: "0 auto",
   },
