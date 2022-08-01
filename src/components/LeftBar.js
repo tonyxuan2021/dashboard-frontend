@@ -20,6 +20,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import { theme } from "../theme";
+import avatarImg from "../assets/content/avatar.jpeg";
 
 const styles = {
   container: {
@@ -41,9 +42,9 @@ const LeftBar = () => {
         <ListItem sx={{ color: "white" }}>
           <ListItemButton>
             <ListItemIcon sx={{ color: "white" }}>
-              <DiamondIcon />
+              <DiamondIcon fontSize="large" />
             </ListItemIcon>
-            <ListItemText primary="Diamond Co." />
+            <ListItemText primary="Diamond Admin PRO" />
             <KeyboardArrowDownIcon />
           </ListItemButton>
         </ListItem>
@@ -56,9 +57,14 @@ const LeftBar = () => {
       />
       <List>
         <ListItem>
-          <ListItemButton>
-            <Avatar src="https://via.placeholder.com/50" />
-            <ListItemText primary="Brokklyn Alice" sx={styles.light} />
+          <ListItemButton
+            sx={{ display: "flex", justifyContent: "space-between", pl: 1.5 }}
+          >
+            <Avatar
+              sx={{ width: "40px", height: "40px", mr: 2.5 }}
+              src={avatarImg}
+            />
+            <ListItemText primary="Brooklyn Alice" sx={styles.light} />
             <KeyboardArrowDownIcon sx={styles.light} />
           </ListItemButton>
         </ListItem>
@@ -81,7 +87,9 @@ const LeftBar = () => {
         </ListItem>
       </List>
       <List>
-        <Typography color="white">PAGES</Typography>
+        <Typography color="white" pl="18px">
+          PAGES
+        </Typography>
 
         {items.map((item, index) => (
           <ListItem key={index} sx={{ color: "white" }}>

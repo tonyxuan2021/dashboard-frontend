@@ -45,6 +45,16 @@ const styles = {
     height: "350px",
     borderRadius: "15px",
   },
+  light: {
+    color: theme.palette.primary.grey,
+  },
+  dark: {
+    color: theme.palette.primary.dark,
+  },
+  boxShadow: {
+    boxShadow:
+      "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
+  },
 };
 
 const Content = () => {
@@ -53,12 +63,11 @@ const Content = () => {
       <Grid
         sx={[
           styles.flex,
+          styles.boxShadow,
           {
             background: "white",
             p: 5,
             borderRadius: "15px",
-            boxShadow:
-              "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
             mb: 10,
           },
         ]}
@@ -71,7 +80,7 @@ const Content = () => {
             <Typography
               color={theme.palette.primary.dark}
               sx={{ mt: "-1.5rem" }}
-              variant="body1"
+              variant="h6"
               fontWeight={700}
             >
               Sales by Country
@@ -95,20 +104,44 @@ const Content = () => {
                     <img src={country.img}></img>
                   </Grid>
                   <Grid item xs={3}>
-                    <Typography>Country</Typography>
-                    <Typography>{country.name}</Typography>
+                    <Typography
+                      variant="body2"
+                      sx={[styles.light, { fontWeight: 700 }]}
+                    >
+                      Country:
+                    </Typography>
+                    <Typography sx={styles.dark}>{country.name}</Typography>
                   </Grid>
                   <Grid item xs={3}>
-                    <Typography>Sales:</Typography>
-                    <Typography>{country.sales}</Typography>
+                    <Typography
+                      variant="body2"
+                      sx={[styles.light, { fontWeight: 700 }]}
+                    >
+                      Sales:
+                    </Typography>
+                    <Typography sx={styles.dark}>
+                      {country.sales.toLocaleString()}
+                    </Typography>
                   </Grid>
                   <Grid item xs={3}>
-                    <Typography>Value:</Typography>
-                    <Typography>${country.value}</Typography>
+                    <Typography
+                      variant="body2"
+                      sx={[styles.light, { fontWeight: 700 }]}
+                    >
+                      Value:
+                    </Typography>
+                    <Typography sx={styles.dark}>
+                      ${country.value.toLocaleString()}
+                    </Typography>
                   </Grid>
                   <Grid item xs={3}>
-                    <Typography>Bounce:</Typography>
-                    <Typography>{country.bounce}</Typography>
+                    <Typography
+                      variant="body2"
+                      sx={[styles.light, { fontWeight: 700 }]}
+                    >
+                      Bounce:
+                    </Typography>
+                    <Typography sx={styles.dark}>{country.bounce}</Typography>
                   </Grid>
                 </Grid>
               );
@@ -121,7 +154,7 @@ const Content = () => {
         </Grid>
       </Grid>
       <Grid item sx={[styles.flex, { mb: 7 }]}>
-        <Grid item sx={[styles.paper]} xs={3.8}>
+        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
           <Grid
             item
             sx={{
@@ -166,7 +199,7 @@ const Content = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sx={[styles.paper]} xs={3.8}>
+        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
           <Grid
             item
             sx={{
@@ -211,7 +244,7 @@ const Content = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sx={[styles.paper]} xs={3.8}>
+        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
           <Grid
             item
             sx={{

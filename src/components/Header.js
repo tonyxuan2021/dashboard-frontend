@@ -14,6 +14,19 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { theme } from "../theme";
+import { styled } from "@mui/material";
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "rgb(26, 115, 232)",
+  },
+
+  "& .MuiOutlinedInput-root": {
+    "&.Mui-focused fieldset": {
+      borderColor: "rgb(26, 115, 232)",
+    },
+  },
+});
 
 const styles = {
   light: {
@@ -26,7 +39,7 @@ const styles = {
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1, mb:8 }}>
+    <Box sx={{ flexGrow: 1, mb: 8 }}>
       <AppBar
         position="static"
         style={{ background: "transparent", boxShadow: "none" }}
@@ -40,31 +53,33 @@ const Header = () => {
               <Grid display="flex" gap={1.5}>
                 <HomeIcon sx={styles.light} />
                 <Typography>/</Typography>
-                <Typography>Dashboards</Typography>
+                <Typography sx={{ opacity: 0.5 }}>Dashboards</Typography>
                 <Typography sx={styles.light}>/</Typography>
                 <Typography>Analytics</Typography>
               </Grid>
               <Grid>
-                <Typography variant="h6" sx={styles.dark}>
+                <Typography variant="h6" fontWeight={700} sx={styles.dark}>
                   Analytics
                 </Typography>
               </Grid>
             </Grid>
-            <MenuIcon fontSize="large" />
+            <MenuIcon
+              fontSize="large"
+              sx={[styles.light, { cursor: "pointer" }]}
+            />
           </Grid>
           <Grid display="flex" alignItems="center" gap={3}>
             <Grid>
-              <TextField
+              <CssTextField
                 variant="outlined"
                 label="Search here"
-                placeholder="Search here"
-              ></TextField>
+              ></CssTextField>
             </Grid>
             <Grid display="flex" gap={2}>
-              <AccountCircleIcon />
-              <SettingsIcon />
+              <AccountCircleIcon sx={styles.light} />
+              <SettingsIcon sx={styles.light} />
               <Badge badgeContent={9} color="error">
-                <NotificationsIcon />
+                <NotificationsIcon sx={styles.light} />
               </Badge>
             </Grid>
           </Grid>

@@ -1,4 +1,5 @@
-/* path {
-    fill: #2a354d;
-    cursor: pointer;
-  } */
+
+.rsm-geographies path {
+  fill: rgb(222, 226, 231);
+  cursor: pointer;
+}

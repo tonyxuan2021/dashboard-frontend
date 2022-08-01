@@ -74,7 +74,7 @@ const styles = {
 
 const Status = () => {
   return (
-    <Grid container item sx={[styles.flexRow, {mb: 10}]}>
+    <Grid container item sx={[styles.flexRow, { mb: 10 }]}>
       {iconStatus.map((status) => {
         return (
           <Grid item xs={2.8} sx={[styles.flexColumn, styles.border]}>

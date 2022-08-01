@@ -14,21 +14,61 @@ const Map = () => {
         <Geographies geography={worldData}>
           {({ geographies }) =>
             geographies.map((geo) => (
-              <Geography key={geo.rsmKey} geography={geo} />
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                style={{
+                  default: { outline: "none" },
+                  hover: { outline: "none" },
+                  pressed: { outline: "none" },
+                }}
+              />
             ))
           }
         </Geographies>
         <Marker coordinates={[-106.346771, 56.130367]}>
-          <circle r={15} fill="rgb(233, 30, 99)" />
+          <circle
+            r={13}
+            fill="rgb(233, 30, 99)"
+            stroke="rgb(255, 255, 255)"
+            fill-opacity={1}
+            strokeWidth={5}
+            strokeOpacity={0.5}
+            cursor="pointer"
+          />
         </Marker>
         <Marker coordinates={[25.748152, 61.92411]}>
-          <circle r={15} fill="rgb(233, 30, 99)" />
+          <circle
+            r={13}
+            fill="rgb(233, 30, 99)"
+            stroke="rgb(255, 255, 255)"
+            fill-opacity={1}
+            strokeWidth={5}
+            strokeOpacity={0.5}
+            cursor="pointer"
+          />
         </Marker>
         <Marker coordinates={[-77.297508, 18.109581]}>
-          <circle r={15} fill="rgb(233, 30, 99)" />
+          <circle
+            r={13}
+            fill="rgb(233, 30, 99)"
+            stroke="rgb(255, 255, 255)"
+            fill-opacity={1}
+            strokeWidth={5}
+            strokeOpacity={0.5}
+            cursor="pointer"
+          />
         </Marker>
         <Marker coordinates={[-8.224454, 39.399872]}>
-          <circle r={15} fill="rgb(233, 30, 99)" />
+          <circle
+            r={13}
+            fill="rgb(233, 30, 99)"
+            stroke="rgb(255, 255, 255)"
+            fill-opacity={1}
+            strokeWidth={5}
+            strokeOpacity={0.5}
+            cursor="pointer"
+          />
         </Marker>
       </ComposableMap>
     </div>
