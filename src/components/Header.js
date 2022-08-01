@@ -16,6 +16,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { theme } from "../theme";
 import { styled } from "@mui/material";
 
+
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "rgb(26, 115, 232)",
@@ -38,6 +39,7 @@ const styles = {
 };
 
 const Header = () => {
+
   return (
     <Box sx={{ flexGrow: 1, mb: 8 }}>
       <AppBar

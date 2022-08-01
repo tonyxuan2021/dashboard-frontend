@@ -149,7 +149,7 @@ const Content = () => {
             <Grid item></Grid>
           </Grid>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={6} sx={{ maxWidth: "600px" }}>
           <Map />
         </Grid>
       </Grid>
