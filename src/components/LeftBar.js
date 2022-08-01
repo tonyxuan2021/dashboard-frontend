@@ -9,9 +9,7 @@ import {
   Typography,
   Avatar,
 } from "@mui/material";
-import React from "react";
-import MailIcon from "@mui/icons-material/Mail";
-import InboxIcon from "@mui/icons-material/Mail";
+import React, { useState } from "react";
 import ImageIcon from "@mui/icons-material/Image";
 import AppsIcon from "@mui/icons-material/Apps";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
@@ -36,6 +34,11 @@ const styles = {
 };
 
 const LeftBar = () => {
+  const [openProfile, setOpenProfile] = useState(false);
+  const handleClick = () => {
+    setOpenProfile(!openProfile);
+  };
+
   return (
     <Grid sx={styles.container}>
       <List>
@@ -45,7 +48,6 @@ const LeftBar = () => {
               <DiamondIcon fontSize="large" />
             </ListItemIcon>
             <ListItemText primary="Diamond Admin PRO" />
-            <KeyboardArrowDownIcon />
           </ListItemButton>
         </ListItem>
       </List>
@@ -60,6 +62,7 @@ const LeftBar = () => {
         <ListItem>
           <ListItemButton
             sx={{ display: "flex", justifyContent: "space-between", pl: 1.5 }}
+            onClick={handleClick}
           >
             <Avatar
               sx={{ width: "40px", height: "40px", mr: 2.5 }}
@@ -69,6 +72,26 @@ const LeftBar = () => {
             <KeyboardArrowDownIcon sx={styles.light} />
           </ListItemButton>
         </ListItem>
+        {openProfile && (
+          <List>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 4.5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
+                  M
+                </Typography>
+                <ListItemText primary="My Profile" sx={styles.light} />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
+                  L
+                </Typography>
+                <ListItemText primary="Logout" sx={styles.light} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        )}
       </List>
       <Divider
         variant="middle"
