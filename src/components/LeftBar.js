@@ -24,7 +24,7 @@ const styles = {
   container: {
     // height: "52rem",
     height: "96vh",
-    width: "19rem",
+    width: "16rem",
     background: "linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))",
     borderRadius: 4,
     position: "fixed",
