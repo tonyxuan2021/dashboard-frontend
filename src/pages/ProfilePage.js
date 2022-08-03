@@ -40,8 +40,8 @@ const ProfilePage = () => {
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (
     <Grid container sx={styles.root}>
-      <Grid item xs={2.3}></Grid>
-      <Grid item xs={matches ? 12 : 9.3}>
+      <Grid item xs={2.0}></Grid>
+      <Grid item xs={matches ? 12 : 9.6}>
         <Grid item sx={[styles.flexColumn]}>
           <Grid item sx={styles.backgroundHero}></Grid>
           <Grid item sx={styles.ProfileContainer}>
