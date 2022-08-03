@@ -4,6 +4,7 @@ import avatarBruce from "../../assets/profile/bruce-mars.jpeg";
 import ProfileTab from "./Tabs";
 import { theme } from "../../theme";
 import Settings from "./Settings";
+import Projects from "./Projects";
 
 const styles = {
   flexColumn: {
@@ -47,6 +48,9 @@ const Profile = () => {
       </Grid>
       <Grid item>
         <Settings />
+      </Grid>
+      <Grid item>
+        <Projects />
       </Grid>
     </Grid>
   );
