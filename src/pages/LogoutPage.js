@@ -38,7 +38,7 @@ const LogoutPage = ({ setShowNav }) => {
   setShowNav(false);
   return (
     <Grid container item sx={[styles.logoutbk, styles.flexColumn]}>
-      <Grid item sx={{ mb: 12 }}>
+      <Grid item sx={{ mb: 15 }}>
         <AppBar
           position="static"
           color="transparent"
@@ -89,7 +89,7 @@ const LogoutPage = ({ setShowNav }) => {
             color="white"
             variant="h5"
             fontWeight={700}
-            sx={{ mb: 5 }}
+            sx={{ mb: 1 }}
           >
             Sign in
           </Typography>
@@ -115,7 +115,7 @@ const LogoutPage = ({ setShowNav }) => {
           ></TextField>
           <Grid
             item
-            sx={[styles.flexRow, { justifyContent: "flex-start", mb: 3 }]}
+            sx={[styles.flexRow, { justifyContent: "flex-start", mb: 1 }]}
           >
             <Switch></Switch>
             <Typography color={theme.palette.primary.grey}>
