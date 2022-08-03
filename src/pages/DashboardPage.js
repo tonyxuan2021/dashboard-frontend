@@ -25,11 +25,8 @@ const DashboardPage = () => {
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (
     <Grid container sx={styles.root}>
-      <Grid item xs={2.3}>
-        {matches ? null : <LeftBar />}
-      </Grid>
+      <Grid item xs={2.3}></Grid>
       <Grid item xs={matches ? 12 : 9.3}>
-        <Header />
         <Content />
       </Grid>
     </Grid>

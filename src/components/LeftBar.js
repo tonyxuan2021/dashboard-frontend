@@ -19,6 +19,7 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import DiamondIcon from "@mui/icons-material/Diamond";
 import { theme } from "../theme";
 import avatarImg from "../assets/content/avatar.jpeg";
+import { Link } from "react-router-dom";
 
 const styles = {
   container: {
@@ -44,12 +45,14 @@ const LeftBar = () => {
     <Grid sx={styles.container}>
       <List>
         <ListItem sx={{ color: "white" }}>
-          <ListItemButton>
-            <ListItemIcon sx={{ color: "white" }}>
-              <DiamondIcon fontSize="large" />
-            </ListItemIcon>
-            <ListItemText primary="Diamond Admin PRO" />
-          </ListItemButton>
+          <Link to="/" className="link">
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "white" }}>
+                <DiamondIcon fontSize="large" />
+              </ListItemIcon>
+              <ListItemText primary="Diamond Admin PRO" />
+            </ListItemButton>
+          </Link>
         </ListItem>
       </List>
       <Divider
@@ -80,7 +83,9 @@ const LeftBar = () => {
                 <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
                   M
                 </Typography>
-                <ListItemText primary="My Profile" sx={styles.light} />
+                <Link to="/profile">
+                  <ListItemText primary="My Profile" sx={styles.light} />
+                </Link>
               </ListItemButton>
             </ListItem>
             <ListItem>

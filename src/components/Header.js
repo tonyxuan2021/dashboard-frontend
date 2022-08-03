@@ -41,7 +41,7 @@ const styles = {
 const Header = () => {
 
   return (
-    <Box sx={{ flexGrow: 1, mb: 8 }}>
+    <Box sx={{ flexGrow: 1, mb: 4 }}>
       <AppBar
         position="static"
         style={{ background: "transparent", boxShadow: "none" }}

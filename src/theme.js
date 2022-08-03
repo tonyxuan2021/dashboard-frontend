@@ -14,5 +14,8 @@ export const theme = createTheme({
     otherColor: {
       main: "#999",
     },
+    blueColor: {
+      main: "rgb(26, 115, 232)",
+    },
   },
 });
