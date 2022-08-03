@@ -31,7 +31,7 @@ const Map = () => {
             r={13}
             fill="rgb(233, 30, 99)"
             stroke="rgb(255, 255, 255)"
-            fill-opacity={1}
+            fillOpacity={1}
             strokeWidth={5}
             strokeOpacity={0.5}
             cursor="pointer"
@@ -42,7 +42,7 @@ const Map = () => {
             r={13}
             fill="rgb(233, 30, 99)"
             stroke="rgb(255, 255, 255)"
-            fill-opacity={1}
+            fillOpacity={1}
             strokeWidth={5}
             strokeOpacity={0.5}
             cursor="pointer"
@@ -53,7 +53,7 @@ const Map = () => {
             r={13}
             fill="rgb(233, 30, 99)"
             stroke="rgb(255, 255, 255)"
-            fill-opacity={1}
+            fillOpacity={1}
             strokeWidth={5}
             strokeOpacity={0.5}
             cursor="pointer"
@@ -64,7 +64,7 @@ const Map = () => {
             r={13}
             fill="rgb(233, 30, 99)"
             stroke="rgb(255, 255, 255)"
-            fill-opacity={1}
+            fillOpacity={1}
             strokeWidth={5}
             strokeOpacity={0.5}
             cursor="pointer"

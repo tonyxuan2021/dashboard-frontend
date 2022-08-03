@@ -37,9 +37,9 @@ const Projects = () => {
         Architects design houses
       </Typography>
       <Grid item sx={[styles.flexRow, { gap: 5 }]}>
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           return (
-            <Grid item xs={3} sx={[styles.flexColumn, { gap: 2 }]}>
+            <Grid key={index} item xs={3} sx={[styles.flexColumn, { gap: 2 }]}>
               <Grid item>
                 <img
                   style={{ width: "100%", borderRadius: "15px" }}
@@ -73,8 +73,8 @@ const Projects = () => {
                   color="blueColor"
                   sx={{
                     display: "block",
-                    pl: 4,
-                    pr: 4,
+                    pl: 3.5,
+                    pr: 3.5,
                     border: "2px solid",
                     borderRadius: "10px",
                   }}
@@ -85,7 +85,7 @@ const Projects = () => {
                 <Grid item sx={{ ml: -2 }}>
                   <img
                     style={{
-                      width: "30px",
+                      width: "25px",
                       borderRadius: "50%",
                       border: "3px solid white",
                     }}
@@ -93,7 +93,7 @@ const Projects = () => {
                   ></img>
                   <img
                     style={{
-                      width: "30px",
+                      width: "25px",
                       borderRadius: "50%",
                       border: "3px solid white",
                       marginLeft: "-16px",
@@ -102,7 +102,7 @@ const Projects = () => {
                   ></img>
                   <img
                     style={{
-                      width: "30px",
+                      width: "25px",
                       borderRadius: "50%",
                       border: "3px solid white",
                       marginLeft: "-16px",
@@ -111,7 +111,7 @@ const Projects = () => {
                   ></img>
                   <img
                     style={{
-                      width: "30px",
+                      width: "25px",
                       borderRadius: "50%",
                       border: "3px solid white",
                       marginLeft: "-16px",

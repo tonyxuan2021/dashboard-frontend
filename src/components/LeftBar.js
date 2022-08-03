@@ -93,7 +93,9 @@ const LeftBar = () => {
                 <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
                   L
                 </Typography>
-                <ListItemText primary="Logout" sx={styles.light} />
+                <Link to="/logout" className="link">
+                  <ListItemText primary="Logout" sx={styles.light} />
+                </Link>
               </ListItemButton>
             </ListItem>
           </List>

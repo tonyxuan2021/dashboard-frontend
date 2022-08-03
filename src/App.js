@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import DashboardPage from "./pages/DashboardPage";
 import { Grid, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material";
@@ -6,6 +6,8 @@ import { theme } from "./theme";
 import Header from "./components/Header";
 import LeftBar from "./components/LeftBar";
 import ProfilePage from "./pages/ProfilePage";
+import LogoutPage from "./pages/LogoutPage";
+import { useState } from "react";
 
 const styles = {
   root: {
@@ -22,19 +24,27 @@ const styles = {
 function App() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
+  const [showNav, setShowNav] = useState(true);
+
   return (
     <BrowserRouter>
-      <Grid container sx={styles.root}>
-        <Grid item xs={2.3}>
-          {matches ? null : <LeftBar />}
+      {showNav && (
+        <Grid container sx={styles.root}>
+          <Grid item xs={2.3}>
+            {matches ? null : <LeftBar />}
+          </Grid>
+          <Grid item xs={matches ? 12 : 9.3}>
+            <Header />
+          </Grid>
         </Grid>
-        <Grid item xs={matches ? 12 : 9.3}>
-          <Header />
-        </Grid>
-      </Grid>
+      )}
       <Routes>
         <Route path="/" element={<DashboardPage />}></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
+        <Route
+          path="/logout"
+          element={<LogoutPage setShowNav={setShowNav} />}
+        ></Route>
       </Routes>
     </BrowserRouter>
   );
