@@ -18,10 +18,10 @@ import { Link } from "react-router-dom";
 const styles = {
   logoutbk: {
     background: `linear-gradient(195deg, rgba(66, 66, 74, 0.6), rgba(25, 25, 25, 0.6)) center / cover,url(${hero})`,
-    height: "100vh",
+    minHeight: "100vh",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    p: 5,
+    p: 3,
   },
   flexColumn: {
     display: "flex",
@@ -37,8 +37,8 @@ const styles = {
 const LogoutPage = ({ setShowNav }) => {
   setShowNav(false);
   return (
-    <Grid container item sx={[styles.logoutbk, styles.flexColumn]}>
-      <Grid item sx={{ mb: 15 }}>
+    <Grid container item sx={[styles.logoutbk, styles.flexColumn, { gap: 10 }]}>
+      <Grid item>
         <AppBar
           position="static"
           color="transparent"
@@ -67,7 +67,7 @@ const LogoutPage = ({ setShowNav }) => {
         item
         sx={{
           m: " 0 auto",
-          width: "450px",
+          width: "400px",
           background: "white",
           borderRadius: "15px",
         }}
@@ -79,17 +79,19 @@ const LogoutPage = ({ setShowNav }) => {
             background:
               "linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232))",
             m: "-30px",
-            p: 5,
+            p: 7,
             ml: 4,
             mr: 4,
             borderRadius: "15px",
+            boxShadow:
+              "rgb(0 0 0 / 14%) 0rem 0.25rem 1.25rem 0rem, rgb(0 187 212 / 40%) 0rem 0.4375rem 0.625rem -0.3125rem",
           }}
         >
           <Typography
             color="white"
             variant="h5"
             fontWeight={700}
-            sx={{ mb: 1 }}
+            sx={{ mb: 5 }}
           >
             Sign in
           </Typography>
@@ -125,7 +127,7 @@ const LogoutPage = ({ setShowNav }) => {
           <Button
             variant="contained"
             color="blueColor"
-            sx={{ p: 1.5, borderRadius: "12px", mb: 5 }}
+            sx={{ p: 1.5, borderRadius: "12px", mb: 3 }}
           >
             <Typography color="white">SIGN IN</Typography>
           </Button>
