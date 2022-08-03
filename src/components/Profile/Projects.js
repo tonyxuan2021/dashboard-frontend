@@ -77,12 +77,13 @@ const Projects = () => {
                     pr: 3.5,
                     border: "2px solid",
                     borderRadius: "10px",
+                    zIndex: 0,
                   }}
                 >
                   <Typography fontWeight={700}>VIEW </Typography>
                   <Typography fontWeight={700}>PROJECT </Typography>
                 </Button>
-                <Grid item sx={{ ml: -2 }}>
+                <Grid item sx={{ ml: -2, zIndex: 1 }}>
                   <img
                     style={{
                       width: "25px",
