@@ -38,7 +38,7 @@ const LogoutPage = ({ setShowNav }) => {
   setShowNav(false);
   return (
     <Grid container item sx={[styles.logoutbk, styles.flexColumn]}>
-      <Grid item sx={{ mb: 8 }}>
+      <Grid item sx={{ mb: 12 }}>
         <AppBar
           position="static"
           color="transparent"
