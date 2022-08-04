@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import Content from "../components/Content/index";
-import Header from "../components/Header";
-import LeftBar from "../components/LeftBar";
 import { theme } from "../theme";
 
 import { useMediaQuery } from "@mui/material";
@@ -20,7 +18,8 @@ const styles = {
   },
 };
 
-const DashboardPage = () => {
+const DashboardPage = ({ setShowNav }) => {
+  setShowNav(true);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("lg"));
   return (

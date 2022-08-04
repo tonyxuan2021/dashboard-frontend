@@ -17,5 +17,8 @@ export const theme = createTheme({
     blueColor: {
       main: "rgb(26, 115, 232)",
     },
+    blackColor: {
+      main: "rgb(25, 25, 25)",
+    },
   },
 });

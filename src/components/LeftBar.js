@@ -37,8 +37,12 @@ const styles = {
 
 const LeftBar = () => {
   const [openProfile, setOpenProfile] = useState(false);
+  const [openPage, setOpenPage] = useState(false);
   const handleClick = () => {
     setOpenProfile(!openProfile);
+  };
+  const handleClickPage = () => {
+    setOpenPage(!openPage);
   };
 
   return (
@@ -109,20 +113,58 @@ const LeftBar = () => {
         }}
       />
       <List>
-        <ListItem sx={{ color: "white" }}>
-          <ListItemButton>
-            <ListItemIcon sx={{ color: "white" }}>
-              <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboards" sx={styles.light} />
-            <KeyboardArrowDownIcon sx={styles.light} />
-          </ListItemButton>
-        </ListItem>
+        <Link to="/">
+          <ListItem sx={{ color: "white" }}>
+            <ListItemButton>
+              <ListItemIcon sx={{ color: "white" }}>
+                <DashboardIcon />
+              </ListItemIcon>
+              <ListItemText primary="Dashboards" sx={styles.light} />
+              <KeyboardArrowDownIcon sx={styles.light} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
       </List>
+
       <List>
         <Typography color="white" pl="18px">
           PAGES
         </Typography>
+        <List>
+          <ListItem sx={{ color: "white" }}>
+            <ListItemButton onClick={handleClickPage}>
+              <ListItemIcon sx={{ color: "white" }}>
+                {<ImageIcon />}
+              </ListItemIcon>
+              <ListItemText sx={styles.light} primary="Pages" />
+              <KeyboardArrowDownIcon sx={styles.light} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {openPage && (
+          <List>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 4.5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
+                  P
+                </Typography>
+                <Link to="/price">
+                  <ListItemText primary="Pricing" sx={styles.light} />
+                </Link>
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0 }}>
+                  W
+                </Typography>
+                <Link to="/widget" className="link">
+                  <ListItemText primary="Widget" sx={styles.light} />
+                </Link>
+              </ListItemButton>
+            </ListItem>
+          </List>
+        )}
 
         {items.map((item, index) => (
           <ListItem key={index} sx={{ color: "white" }}>
@@ -139,10 +181,6 @@ const LeftBar = () => {
 };
 
 const items = [
-  {
-    icon: <ImageIcon />,
-    text: "Pages",
-  },
   {
     icon: <AppsIcon />,
     text: "Applications",

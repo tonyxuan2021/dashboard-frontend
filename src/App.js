@@ -8,6 +8,8 @@ import LeftBar from "./components/LeftBar";
 import ProfilePage from "./pages/ProfilePage";
 import LogoutPage from "./pages/LogoutPage";
 import { useState } from "react";
+import PricingPage from "./pages/PricingPage";
+import WidgetPage from "./pages/WidgetPage";
 
 const styles = {
   root: {
@@ -39,12 +41,20 @@ function App() {
         </Grid>
       )}
       <Routes>
-        <Route path="/" element={<DashboardPage />}></Route>
+        <Route
+          path="/"
+          element={<DashboardPage setShowNav={setShowNav} />}
+        ></Route>
         <Route path="/profile" element={<ProfilePage />}></Route>
         <Route
           path="/logout"
           element={<LogoutPage setShowNav={setShowNav} />}
         ></Route>
+        <Route
+          path="/price"
+          element={<PricingPage setShowNav={setShowNav} />}
+        ></Route>
+        <Route path="/widget" element={<WidgetPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
