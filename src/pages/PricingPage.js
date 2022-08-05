@@ -6,6 +6,13 @@ import CheckIcon from "@mui/icons-material/Check";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { theme } from "../theme";
 import { Link } from "react-router-dom";
+import coin from "../assets/price/coinbase.svg";
+import nasa from "../assets/price/nasa.svg";
+import netf from "../assets/price/netflix.svg";
+import pint from "../assets/price/pinterest.svg";
+import spot from "../assets/price/spotify.svg";
+import voda from "../assets/price/vodafone.svg";
+import Questions from "../components/Price/Questions";
 
 const styles = {
   logoutbk: {
@@ -76,21 +83,24 @@ const PricingPage = ({ setShowNav }) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid item>
-        <Grid
-          item
-          sx={[
-            styles.flexRow,
-            {
-              background: "white",
-              ml: 6,
-              mr: 6,
-              mt: -10,
-              pt: 10,
-              borderRadius: "12px",
-            },
-          ]}
-        >
+      <Grid
+        item
+        sx={[
+          styles.flexColumn,
+          {
+            alignItems: "normal",
+            background: "white",
+            ml: 6,
+            mr: 6,
+            mt: -10,
+            mb: 10,
+            pt: 10,
+            pb: 10,
+            borderRadius: "12px",
+          },
+        ]}
+      >
+        <Grid item sx={[styles.flexRow, {}]}>
           <Grid
             item
             sx={[
@@ -314,6 +324,38 @@ const PricingPage = ({ setShowNav }) => {
               <Typography color="white">JOIN</Typography>
             </Button>
           </Grid>
+        </Grid>
+        <Grid item>
+          <Typography
+            variant="h6"
+            color={theme.palette.primary.grey}
+            sx={{ textAlign: "center", mb: 5 }}
+          >
+            More than 50+ brands trust Material
+          </Typography>
+        </Grid>
+        <Grid item sx={[styles.flexRow, { maxWidth: "100vw", mb: 12 }]}>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={coin}></img>
+          </Grid>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={nasa}></img>
+          </Grid>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={netf}></img>
+          </Grid>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={pint}></img>
+          </Grid>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={spot}></img>
+          </Grid>
+          <Grid item>
+            <img style={{ maxWidth: "245px" }} src={voda}></img>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <Questions />
         </Grid>
       </Grid>
     </Grid>
