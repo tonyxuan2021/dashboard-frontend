@@ -1,9 +1,6 @@
 import React from "react";
 import { Grid, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material";
-import SavingsIcon from "@mui/icons-material/Savings";
-import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
-import TaskIcon from "@mui/icons-material/Task";
 import Widget1 from "../components/Widget/Widget1";
 import Widget2 from "../components/Widget/Widget2";
 

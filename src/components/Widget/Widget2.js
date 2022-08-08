@@ -5,7 +5,7 @@ import VolumeDownIcon from "@mui/icons-material/VolumeDown";
 import { theme } from "../../theme";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PaymentIcon from "@mui/icons-material/Payment";
-// import CreditCardTemp from "./CreditCard";
+import cc from "../../assets/widget/creditcard.png";
 
 const styles = {
   flexColumn: {
@@ -20,7 +20,8 @@ const styles = {
 const Widget2 = () => {
   return (
     <Grid item sx={[styles.flexRow, { gap: 4 }]}>
-      <Grid item xs={3} sx={[styles.flexColumn, { gap: 4 }]}>
+      <Grid item xs={4} sx={[styles.flexColumn, { gap: 4 }]}>
+        {/* xs */}
         {data1.map((data) => {
           return (
             <Grid
@@ -65,7 +66,8 @@ const Widget2 = () => {
           );
         })}
       </Grid>
-      <Grid item xs={5} sx={[styles.flexRow, { gap: 4 }]}>
+      <Grid item xs={8} sx={[styles.flexRow, { gap: 4 }]}>
+        {/* xs */}
         {data2.map((data) => {
           return (
             <Grid
@@ -121,8 +123,8 @@ const Widget2 = () => {
           );
         })}
       </Grid>
-      <Grid item xs={3}>
-        {/* <CreditCardTemp /> */}
+      <Grid item>
+        <img style={{ width: "100%", borderRadius: "15px" }} src={cc}></img>
       </Grid>
     </Grid>
   );
