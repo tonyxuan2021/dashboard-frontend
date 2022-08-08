@@ -42,6 +42,7 @@ const Widget1 = () => {
         {
           alignItems: "center",
           justifyContent: "space-between",
+          mb: 4,
         },
       ]}
     >
@@ -57,7 +58,7 @@ const Widget1 = () => {
             borderRadius: "15px",
           },
         ]}
-        xs={4}
+        xs={4.5}
       >
         <Typography
           variant="h6"
@@ -120,7 +121,7 @@ const Widget1 = () => {
             borderRadius: "12px",
           },
         ]}
-        xs={7.5}
+        xs={7.1}
       >
         <Grid
           item

@@ -5,6 +5,7 @@ import SavingsIcon from "@mui/icons-material/Savings";
 import NotificationsActiveIcon from "@mui/icons-material/NotificationsActive";
 import TaskIcon from "@mui/icons-material/Task";
 import Widget1 from "../components/Widget/Widget1";
+import Widget2 from "../components/Widget/Widget2";
 
 const styles = {
   root: {
@@ -40,8 +41,11 @@ const WidgetPage = () => {
     <Grid container sx={styles.root}>
       <Grid item xs={2.0}></Grid>
       <Grid item xs={matches ? 12 : 9.6}>
-        <Grid item sx={[styles.flexColumn, { ml: 4 }]}>
+        <Grid item sx={{ ml: 4 }}>
           <Widget1 />
+        </Grid>
+        <Grid item sx={{ ml: 4 }}>
+          <Widget2 />
         </Grid>
       </Grid>
     </Grid>
