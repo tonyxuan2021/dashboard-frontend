@@ -5,7 +5,7 @@ import VolumeDownIcon from "@mui/icons-material/VolumeDown";
 import { theme } from "../../theme";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import PaymentIcon from "@mui/icons-material/Payment";
-import CreditCardTemp from "./CreditCard";
+// import CreditCardTemp from "./CreditCard";
 
 const styles = {
   flexColumn: {
@@ -122,7 +122,7 @@ const Widget2 = () => {
         })}
       </Grid>
       <Grid item xs={3}>
-        <CreditCardTemp />
+        {/* <CreditCardTemp /> */}
       </Grid>
     </Grid>
   );
