@@ -38,7 +38,7 @@ const WidgetPage = () => {
   return (
     <Grid container sx={styles.root}>
       <Grid item xs={2.0}></Grid>
-      <Grid item xs={matches ? 12 : 9.6}>
+      <Grid item xs={matches ? 12 : 9.6} >
         <Grid item sx={{ ml: 4 }}>
           <Widget1 />
         </Grid>
