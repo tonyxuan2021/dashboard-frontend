@@ -336,22 +336,22 @@ const PricingPage = ({ setShowNav }) => {
         </Grid>
         <Grid item sx={[styles.flexRow, { maxWidth: "100vw", mb: 12 }]}>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={coin}></img>
+            <img style={{ maxWidth: "220px" }} src={coin}></img>
           </Grid>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={nasa}></img>
+            <img style={{ maxWidth: "220px" }} src={nasa}></img>
           </Grid>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={netf}></img>
+            <img style={{ maxWidth: "220px" }} src={netf}></img>
           </Grid>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={pint}></img>
+            <img style={{ maxWidth: "220px" }} src={pint}></img>
           </Grid>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={spot}></img>
+            <img style={{ maxWidth: "220px" }} src={spot}></img>
           </Grid>
           <Grid item>
-            <img style={{ maxWidth: "245px" }} src={voda}></img>
+            <img style={{ maxWidth: "220px" }} src={voda}></img>
           </Grid>
         </Grid>
         <Grid item>

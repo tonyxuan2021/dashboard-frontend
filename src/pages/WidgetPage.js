@@ -3,6 +3,7 @@ import { Grid, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material";
 import Widget1 from "../components/Widget/Widget1";
 import Widget2 from "../components/Widget/Widget2";
+import Widget3 from "../components/Widget/Widget3";
 
 const styles = {
   root: {
@@ -43,6 +44,9 @@ const WidgetPage = () => {
         </Grid>
         <Grid item sx={{ ml: 4 }}>
           <Widget2 />
+        </Grid>
+        <Grid item sx={{ ml: 4 }}>
+          <Widget3 />
         </Grid>
       </Grid>
     </Grid>

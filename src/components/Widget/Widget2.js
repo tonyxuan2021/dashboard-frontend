@@ -19,9 +19,8 @@ const styles = {
 
 const Widget2 = () => {
   return (
-    <Grid item sx={[styles.flexRow, { gap: 4 }]}>
+    <Grid item sx={[styles.flexRow, { gap: 4, mb:4 }]}>
       <Grid item xs={4} sx={[styles.flexColumn, { gap: 4 }]}>
-        {/* xs */}
         {data1.map((data) => {
           return (
             <Grid
