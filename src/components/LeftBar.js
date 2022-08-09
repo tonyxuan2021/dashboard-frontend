@@ -37,12 +37,16 @@ const styles = {
 
 const LeftBar = () => {
   const [openProfile, setOpenProfile] = useState(false);
+  const [openTable, setOpenTable] = useState(false);
   const [openPage, setOpenPage] = useState(false);
   const handleClick = () => {
     setOpenProfile(!openProfile);
   };
   const handleClickPage = () => {
     setOpenPage(!openPage);
+  };
+  const handleClickTable = () => {
+    setOpenTable(!openTable);
   };
 
   return (
@@ -166,6 +170,32 @@ const LeftBar = () => {
           </List>
         )}
 
+        <List>
+          <ListItem sx={{ color: "white" }}>
+            <ListItemButton onClick={handleClickTable}>
+              <ListItemIcon sx={{ color: "white" }}>
+                {<AppsIcon />}
+              </ListItemIcon>
+              <ListItemText sx={styles.light} primary="Applications" />
+              <KeyboardArrowDownIcon sx={styles.light} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {openTable && (
+          <List>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
+                  D
+                </Typography>
+                <Link to="/table" className="link">
+                  <ListItemText primary="Data Table" sx={styles.light} />
+                </Link>
+              </ListItemButton>
+            </ListItem>
+          </List>
+        )}
+
         {items.map((item, index) => (
           <ListItem key={index} sx={{ color: "white" }}>
             <ListItemButton>
@@ -181,10 +211,6 @@ const LeftBar = () => {
 };
 
 const items = [
-  {
-    icon: <AppsIcon />,
-    text: "Applications",
-  },
   {
     icon: <ShoppingBasketIcon />,
     text: "Ecommerce",

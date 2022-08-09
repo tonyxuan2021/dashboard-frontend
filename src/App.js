@@ -10,6 +10,7 @@ import LogoutPage from "./pages/LogoutPage";
 import { useState } from "react";
 import PricingPage from "./pages/PricingPage";
 import WidgetPage from "./pages/WidgetPage";
+import TablePage from "./pages/TablePage";
 
 const styles = {
   root: {
@@ -55,6 +56,7 @@ function App() {
           element={<PricingPage setShowNav={setShowNav} />}
         ></Route>
         <Route path="/widget" element={<WidgetPage />}></Route>
+        <Route path="/table" element={<TablePage />}></Route>
       </Routes>
     </BrowserRouter>
   );
