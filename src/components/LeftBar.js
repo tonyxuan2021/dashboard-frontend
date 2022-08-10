@@ -39,6 +39,7 @@ const LeftBar = () => {
   const [openProfile, setOpenProfile] = useState(false);
   const [openTable, setOpenTable] = useState(false);
   const [openPage, setOpenPage] = useState(false);
+  const [openProduct, setOpenProduct] = useState(false);
   const handleClick = () => {
     setOpenProfile(!openProfile);
   };
@@ -47,6 +48,9 @@ const LeftBar = () => {
   };
   const handleClickTable = () => {
     setOpenTable(!openTable);
+  };
+  const handleClickProduct = () => {
+    setOpenProduct(!openProduct);
   };
 
   return (
@@ -196,7 +200,33 @@ const LeftBar = () => {
           </List>
         )}
 
-        {items.map((item, index) => (
+        <List>
+          <ListItem sx={{ color: "white" }}>
+            <ListItemButton onClick={handleClickProduct}>
+              <ListItemIcon sx={{ color: "white" }}>
+                {<ShoppingBasketIcon />}
+              </ListItemIcon>
+              <ListItemText sx={styles.light} primary="Ecommerce" />
+              <KeyboardArrowDownIcon sx={styles.light} />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        {openProduct && (
+          <List>
+            <ListItem>
+              <ListItemButton sx={{ display: "flex", gap: 5 }}>
+                <Typography variant="h6" color="white" sx={{ pl: 0.5 }}>
+                  P
+                </Typography>
+                <Link to="/product" className="link">
+                  <ListItemText primary="Product Page" sx={styles.light} />
+                </Link>
+              </ListItemButton>
+            </ListItem>
+          </List>
+        )}
+
+        {/* {items.map((item, index) => (
           <ListItem key={index} sx={{ color: "white" }}>
             <ListItemButton>
               <ListItemIcon sx={{ color: "white" }}>{item.icon}</ListItemIcon>
@@ -204,21 +234,21 @@ const LeftBar = () => {
               <KeyboardArrowDownIcon sx={styles.light} />
             </ListItemButton>
           </ListItem>
-        ))}
+        ))} */}
       </List>
     </Grid>
   );
 };
 
-const items = [
-  {
-    icon: <ShoppingBasketIcon />,
-    text: "Ecommerce",
-  },
-  {
-    icon: <BeenhereIcon />,
-    text: "Authentication",
-  },
-];
+// const items = [
+//   {
+//     icon: <ShoppingBasketIcon />,
+//     text: "Ecommerce",
+//   },
+//   {
+//     icon: <BeenhereIcon />,
+//     text: "Authentication",
+//   },
+// ];
 
 export default LeftBar;

@@ -11,6 +11,7 @@ import { useState } from "react";
 import PricingPage from "./pages/PricingPage";
 import WidgetPage from "./pages/WidgetPage";
 import TablePage from "./pages/TablePage";
+import ProductPage from "./pages/ProductPage";
 
 const styles = {
   root: {
@@ -57,6 +58,7 @@ function App() {
         ></Route>
         <Route path="/widget" element={<WidgetPage />}></Route>
         <Route path="/table" element={<TablePage />}></Route>
+        <Route path="/product" element={<ProductPage />}></Route>
       </Routes>
     </BrowserRouter>
   );
