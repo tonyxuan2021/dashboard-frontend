@@ -52,3 +52,6 @@ Install dependencies
 
 ![screencapture-localhost-3000-widget-2022-08-08-14_39_00](https://user-images.githubusercontent.com/93957228/183523210-1c193896-3005-430a-8c8e-a6be46b2caf9.png)
 
+### Data Table Page
+
+![screencapture-dashboard-diamond-admin-herokuapp-table-2022-08-09-15_37_25](https://user-images.githubusercontent.com/93957228/183773872-096e29e8-b172-409c-9e11-34c25c4516ef.png)
