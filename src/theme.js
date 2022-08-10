@@ -11,6 +11,10 @@ export const theme = createTheme({
     secondary: {
       main: "#15c630",
     },
+
+    third: {
+      main: "rgb(188, 226, 190)",
+    },
     otherColor: {
       main: "#999",
     },
