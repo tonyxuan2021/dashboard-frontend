@@ -55,3 +55,6 @@ Install dependencies
 ### Data Table Page
 
 ![screencapture-dashboard-diamond-admin-herokuapp-table-2022-08-09-15_37_25](https://user-images.githubusercontent.com/93957228/183773872-096e29e8-b172-409c-9e11-34c25c4516ef.png)
+
+### Product Page
+![screencapture-localhost-3000-product-2022-08-10-16_41_04](https://user-images.githubusercontent.com/93957228/184041442-f08a468f-57bc-4024-a10b-e70556fea791.png)
