@@ -1,9 +1,21 @@
-/* path {
-    fill: #2a354d;
-    cursor: pointer;
-  } */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  padding: 0;
+  max-width: 1440px;
+}
 
-  .link {
-    color: white;
-    text-decoration: none;
-  }
+/* body {
+
+} */
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+canvas {
+  width: 100%;
+}

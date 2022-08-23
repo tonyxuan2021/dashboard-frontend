@@ -12,32 +12,35 @@ import PricingPage from "./pages/PricingPage";
 import WidgetPage from "./pages/WidgetPage";
 import TablePage from "./pages/TablePage";
 import ProductPage from "./pages/ProductPage";
+import { styled } from "@mui/material/styles";
 
 const styles = {
   root: {
     background: theme.palette.primary.main,
     display: "flex",
     justifyContent: "space-between",
-    gap: 5,
     p: 2,
-    maxWidth: "1500px",
-    m: "0 auto",
   },
 };
 
+const LeftBarContainer = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
+}));
+
 function App() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("lg"));
   const [showNav, setShowNav] = useState(true);
 
   return (
     <BrowserRouter>
       {showNav && (
         <Grid container sx={styles.root}>
-          <Grid item xs={2.3}>
-            {matches ? null : <LeftBar />}
-          </Grid>
-          <Grid item xs={matches ? 12 : 9.3}>
+          <LeftBarContainer item lg={2.3}>
+            <LeftBar />
+          </LeftBarContainer>
+          <Grid item lg={9.3}>
             <Header />
           </Grid>
         </Grid>

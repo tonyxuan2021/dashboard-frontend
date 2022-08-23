@@ -5,6 +5,7 @@ import BarChartIcon from "@mui/icons-material/BarChart";
 import StoreIcon from "@mui/icons-material/Store";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import { theme } from "../../theme";
+import { styled } from "@mui/material/styles";
 
 const iconStatus = [
   {
@@ -70,8 +71,8 @@ const styles = {
     mt: "-40px",
     color: "white",
   },
-  boxShadow: {
-    boxShadow:
+  bolghadow: {
+    bolghadow:
       "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
   },
   grey: {
@@ -82,15 +83,23 @@ const styles = {
   },
 };
 
+const StatusBox = styled(Grid)(({ theme }) => ({
+  // marginTop: 30,
+  [theme.breakpoints.down("md")]: {
+    marginBottom: 50,
+  },
+}));
+
 const Status = () => {
   return (
     <Grid container item sx={[styles.flexRow, { mb: 10 }]}>
       {iconStatus.map((status) => {
         return (
-          <Grid
+          <StatusBox
             item
-            xs={2.8}
-            sx={[styles.flexColumn, styles.border, styles.boxShadow]}
+            lg={2.8}
+            sm={5.5}
+            sx={[styles.flexColumn, styles.border, styles.bolghadow]}
           >
             <Grid item sx={styles.flexRow}>
               <Icon item sx={[styles.icon, { background: status.bkColor }]}>
@@ -122,7 +131,7 @@ const Status = () => {
                 {status.period}
               </Typography>
             </Grid>
-          </Grid>
+          </StatusBox>
         );
       })}
     </Grid>

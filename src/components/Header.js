@@ -46,9 +46,9 @@ const Header = () => {
       >
         <Toolbar
           disableGutters={true}
-          sx={{ display: "flex", justifyContent: "space-between" }}
+          sx={{ display: "flex", justifyContent: "space-between", margin: 0 }}
         >
-          <Grid display="flex" alignItems="center">
+          <Grid display="flex" alignItems="center" sx={{ m: 0 }}>
             <Grid display="flex" flexDirection="column" sx={{ mr: 10 }}>
               <Grid display="flex" gap={1.5}>
                 <HomeIcon sx={styles.light} />
@@ -68,7 +68,7 @@ const Header = () => {
               sx={[styles.light, { cursor: "pointer" }]}
             />
           </Grid>
-          <Grid display="flex" alignItems="center" gap={3}>
+          <Grid display="flex" alignItems="center" gap={3} sx={{ m: 0 }}>
             <Grid>
               <CssTextField
                 variant="outlined"

@@ -5,6 +5,7 @@ import house_2 from "../../assets/content/house_2.jpg";
 import house_3 from "../../assets/content/house_3.jpg";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { theme } from "../../theme";
+import { styled } from "@mui/material/styles";
 
 const styles = {
   flexRow: {
@@ -15,8 +16,8 @@ const styles = {
     display: "flex",
     flexDirection: "column",
   },
-  boxShadow: {
-    boxShadow:
+  bolghadow: {
+    bolghadow:
       "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
   },
   grey: {
@@ -27,19 +28,26 @@ const styles = {
   },
 };
 
+const ResidenceBox = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    marginBottom: 100,
+  },
+}));
+
 const Residence = () => {
   return (
     <Grid container item sx={styles.flexRow}>
       {houses.map((house) => {
         return (
-          <Grid
+          <ResidenceBox
             item
             sx={[
               styles.flexColumn,
-              styles.boxShadow,
+              styles.bolghadow,
               { background: "white", borderRadius: "15px" },
             ]}
-            xs={3.8}
+            lg={3.8}
+            sm={5.5}
             key={house.id}
           >
             <Grid item sx={[{ p: 3, mt: "-60px" }]}>
@@ -47,7 +55,7 @@ const Residence = () => {
                 style={{
                   width: "100%",
                   borderRadius: "15px",
-                  boxShadow: "5px 5px 30px",
+                  bolghadow: "5px 5px 30px",
                 }}
                 src={house.img}
               ></img>
@@ -75,16 +83,9 @@ const Residence = () => {
                 <Typography color={styles.grey}>{house.location}</Typography>
               </Grid>
             </Grid>
-          </Grid>
+          </ResidenceBox>
         );
       })}
-
-      {/* <Grid item sx={styles.flexColumn} xs={3.8}>
-        <img src={house_2}></img>
-      </Grid>
-      <Grid item sx={styles.flexColumn} xs={3.8}>
-        <img src={house_3}></img>
-      </Grid> */}
     </Grid>
   );
 };

@@ -13,6 +13,7 @@ import { Charts_2 } from "./Charts/Charts_2";
 import { Charts_3 } from "./Charts/Charts_3";
 import Status from "./Status";
 import Residence from "./Residence";
+import { styled } from "@mui/material/styles";
 
 const styles = {
   flex: {
@@ -51,19 +52,27 @@ const styles = {
   dark: {
     color: theme.palette.primary.dark,
   },
-  boxShadow: {
-    boxShadow:
+  bolghadow: {
+    bolghadow:
       "rgb(0 0 0 / 10%) 0rem 0.25rem 0.375rem -0.0625rem, rgb(0 0 0 / 6%) 0rem 0.125rem 0.25rem -0.0625rem",
   },
 };
+
+const ChartBox = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    marginBottom: 100,
+  },
+}));
 
 const Content = () => {
   return (
     <Grid container display="flex" flexDirection="column">
       <Grid
+        container
+        item
         sx={[
           styles.flex,
-          styles.boxShadow,
+          styles.bolghadow,
           {
             background: "white",
             p: 5,
@@ -72,7 +81,7 @@ const Content = () => {
           },
         ]}
       >
-        <Grid item xs={6}>
+        <Grid item lg={6}>
           <Grid item sx={{ display: "flex", gap: 3, mb: 3 }}>
             <Grid item sx={styles.language}>
               <LanguageIcon fontSize="large" sx={{ color: "white" }} />
@@ -103,7 +112,7 @@ const Content = () => {
                   <Grid item>
                     <img src={country.img}></img>
                   </Grid>
-                  <Grid item xs={3}>
+                  <Grid item lg={3}>
                     <Typography
                       variant="body2"
                       sx={[styles.light, { fontWeight: 700 }]}
@@ -112,7 +121,7 @@ const Content = () => {
                     </Typography>
                     <Typography sx={styles.dark}>{country.name}</Typography>
                   </Grid>
-                  <Grid item xs={3}>
+                  <Grid item lg={3}>
                     <Typography
                       variant="body2"
                       sx={[styles.light, { fontWeight: 700 }]}
@@ -123,7 +132,7 @@ const Content = () => {
                       {country.sales.toLocaleString()}
                     </Typography>
                   </Grid>
-                  <Grid item xs={3}>
+                  <Grid item lg={3}>
                     <Typography
                       variant="body2"
                       sx={[styles.light, { fontWeight: 700 }]}
@@ -134,7 +143,7 @@ const Content = () => {
                       ${country.value.toLocaleString()}
                     </Typography>
                   </Grid>
-                  <Grid item xs={3}>
+                  <Grid item lg={3}>
                     <Typography
                       variant="body2"
                       sx={[styles.light, { fontWeight: 700 }]}
@@ -149,12 +158,12 @@ const Content = () => {
             <Grid item></Grid>
           </Grid>
         </Grid>
-        <Grid item xs={6} sx={{ maxWidth: "600px" }}>
+        <Grid item lg={6} sx={{ minWidth: "300px" }}>
           <Map />
         </Grid>
       </Grid>
-      <Grid item sx={[styles.flex, { mb: 7 }]}>
-        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
+      <Grid container item sx={[styles.flex, { mb: 7 }]}>
+        <ChartBox item sx={[styles.paper, styles.bolghadow]} lg={3.8} sm={5.5}>
           <Grid
             item
             sx={{
@@ -208,8 +217,8 @@ const Content = () => {
               </Typography>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
+        </ChartBox>
+        <Grid item sx={[styles.paper, styles.bolghadow]} lg={3.8} sm={5.5}>
           <Grid
             item
             sx={{
@@ -264,7 +273,7 @@ const Content = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item sx={[styles.paper, styles.boxShadow]} xs={3.8}>
+        <Grid item sx={[styles.paper, styles.bolghadow]} lg={3.8} sm={5.5}>
           <Grid
             item
             sx={{
